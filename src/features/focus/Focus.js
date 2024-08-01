@@ -6,7 +6,7 @@ export const Focus = () => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text>What would you like to focus on?</Text>
+        <Text style={styles.title}>What would you like to focus on?</Text>
         <TextInput />
       </View>
     </View>
@@ -22,5 +22,9 @@ const styles = StyleSheet.create({
     padding: 16,
     justifyContent: "center",
   },
-  title: {},
+  title: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: "30",
+  },
 });
