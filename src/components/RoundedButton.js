@@ -4,7 +4,7 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 export const RoundedButton = ({
   style = {},
   textStyle = {},
-  size = 120,
+  size = 60,
   ...props
 }) => {
   return (

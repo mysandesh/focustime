@@ -9,14 +9,14 @@ export const Focus = () => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>What would you like to focus on?</Text>
         <View style={styles.inputContainer}>
-          <TextInput />
-          <RoundedButton title="+" />
+          <TextInput style={{ flex: 1, marginRight: 10 }} />
+          <RoundedButton size={50} title="+" onPress={() => null} />
         </View>
       </View>
     </View>
   );
 };
- 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -29,9 +29,11 @@ const styles = StyleSheet.create({
   title: {
     color: "white",
     fontWeight: "bold",
-    fontSize: "30",
+    fontSize: "24",
   },
   inputContainer: {
     paddingTop: 20,
+    flexDirection: "row",
+    alignItems: "center",
   },
 });
