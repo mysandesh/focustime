@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { TextInput } from "react-native-paper";
 import { RoundedButton } from "../../components/RoundedButton";
-import { fontSizes, paddingSizes } from "../../utils/sizes";
+import { fontSizes, paddingSizes, spacing } from "../../utils/sizes";
+import { colors } from "../../utils/colors";
 
 export const Focus = ({ addSubject }) => {
   const [tmpItem, setTmpItem] = useState(null);
@@ -12,7 +13,7 @@ export const Focus = ({ addSubject }) => {
         <Text style={styles.title}>What would you like to focus on?</Text>
         <View style={styles.inputContainer}>
           <TextInput
-            style={{ flex: 1, marginRight: 10 }}
+            style={{ flex: 1, marginRight: spacing.md }}
             onSubmitEditing={({ nativeEvent }) => {
               setTmpItem(nativeEvent.text);
             }}
@@ -36,11 +37,11 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flex: 0.5,
-    padding: paddingSizes.md,
+    padding: spacing.md,
     justifyContent: "center",
   },
   title: {
-    color: "white",
+    color: colors.white,
     fontWeight: "bold",
     fontSize: fontSizes.lg,
   },
